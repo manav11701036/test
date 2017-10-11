@@ -1,0 +1,32 @@
+#include<stdio.h>
+void ins(int a[],int size,int pos,int val)
+{
+	int i;
+	for(i=size-1;i>=pos-1;i--)
+	{
+		a[i+1]=a[i];
+	}
+	a[pos-1]=val;
+}
+main()
+{
+	int i,a[100],size,pos,val;
+	printf("enter size of array");
+	scanf("%d",&size);
+	printf("enter the position of insertion");
+	scanf("%d",&pos);
+	printf("enter value to be inserted");
+	scanf("%d",&val);
+	printf("enter elements:");
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	ins(a,size,pos,val);
+	printf("changed array is:");
+	for(i=0;i<=size;i++)
+	{
+		printf("%d ",a[i]);
+	}
+	
+}

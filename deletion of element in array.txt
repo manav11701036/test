@@ -1,0 +1,29 @@
+#include<stdio.h>
+void del(int a[],int size,int pos)
+{
+	int i;
+	for(i=pos-1;i<size;i++)
+	{
+		a[i]=a[i+1];
+	}
+}
+main()
+{
+	int i,a[100],size,pos;
+	printf("enter size of array");
+	scanf("%d",&size);
+	printf("enter position of element to be deleted");
+	scanf("%d",&pos);
+	printf("enter elements:");
+	for(i=0;i<size;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	del(a,size,pos);
+	printf("changed array is:");
+	for(i=0;i<size-1;i++)
+	{
+		printf("%d ",a[i]);
+	}
+	
+}
